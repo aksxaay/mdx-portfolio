@@ -1,0 +1,93 @@
+### delba portfolio temp setup
+
+I have to somehow convert this into what mine sorta looks like.
+
+```
+yarn run dev
+```
+
+### what is prisma?
+
+I also have to look into what prisma is
+`yarn run generate` runs prisma generate and things.
+
+[what is prisma // fireship](https://www.youtube.com/watch?v=rLRIB6AF2Dg)
+
+prism open source tool that is a database
+this is a modern app development
+ObjectRelationalMapping
+
+Prisma -> ORM
+it has its own declarative schema language
+
+converts schema into type definitions
+prisma.studio manages all tables and rows and things.
+
+to get started you need a relational database like MYSQL / PostgreSQL
+
+mongoDB is supported as well.
+```npx prisma init```
+also prisma directory and things.
+```prisma db pull generates a schema```
+
+optional constraints
+code is very concise than otherwise in raw SQL
+
+to interact with the databse
+`prisma generate` to generate the client library.
+
+
+### What is an ORM?
+which ORM should one use?
+Object Relational Mapping it helps write less code and be more concise another stack that I have to add to my damn thing bruh.
+[Ben Awad // ORM](https://www.youtube.com/watch?v=3Pxj-4IrOcs)
+
+dude was using 
+### Sequelize - 
+- been around the longest
+- solid and mature
+- experience was meh
+- documentation meh
+- confusion points
+
+idk I'm not happy using this either.
+
+### TypeORM
+- connections are confusin
+- their API needs to be improved
+- docs needs to be better.
+- integration with TS(typescript) is much better
+- nice `QueryBuilder()`  
+- this is what Ben Awas consistently uses
+
+
+### Prisma - not quite an ORM
+- tries to replace traditional ORMs
+- wouldn't categorize them an ORM.
+- create a data model (graphQL syntax)
+- generates a MySQL database for you / MongoDB
+- generate this schema for you.
+- generates all the CRUD operations for you
+- integrates well with GraphQL API
+- there's going to be an intermediate server
+- speed is really fast.
+- way less boilerplate to write
+- new admin panel
+- reminds me of sanity I suppose
+- there's this extra server that you need to have
+- they're going to get rid of the proxy server using probably a docker.
+- you run into corner case and edge cases or something
+- not working with some postgres columns
+
+
+`prisma generate --watch` this updates automatically.
+
+Prisma 2 is somewhere between an `ORM` and `QueryBuilder` closer to a query builder, and it has a higher level API
+
+you can use a nodemon - this helps you watch the file.
+what's the N+1 problem that prisma solves?
+[N+1 query problem with ORMs](https://stackoverflow.com/questions/97197/what-is-the-n1-selects-problem-in-orm-object-relational-mapping)
+
+okay apparently when you're trying to to execute a query you might trigger this issue without realizing where instead of doing one you might trigger the rest of the queries as well. I can't understand this quite well, but it seems prisma might solve this.
+
+some bugs and things, caching issues.
