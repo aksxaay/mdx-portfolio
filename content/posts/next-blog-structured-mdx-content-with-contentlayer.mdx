@@ -1,14 +1,12 @@
 ---
-title: "Turn Freeform MDX Content into Structured Data with Contentlayer"
-description: "Deal with the chaos of freeform MDX content by transforming it into structured type-safe data and reduce the boilerplate and external tools required to effectively manage MDX content."
+title: "Integrate MDX with a single tool and less boilerplate. Manage content with type-safe data and helper functions."
+description: "Effortlessly integrate MDX and manage content effectively. Validate and transform markdown posts into type-safe data your app can import."
 publishedAt: "2022-04-25"
 status: "published"
 series:
+  order: 2
   title: "Build a Developer Blog with Next.js"
 ---
-
-import { Files } from "../ui/Files"
-import { Code } from "../ui/Code"
 
 The second part of this series explores setting up and configuring the content layer of a Next.js + MDX blogging system.
 
@@ -32,9 +30,9 @@ I have been using and enjoying Contentlayer for my own blog and last week it fin
   <StaticTweet id="1517126728711213056" showAttachments={false} />
 </div>
 
-# Code
+# Choose your journey
 
-You're welcome to follow along with this step-by-step walkthrough or if you just want the [complete code](#complete-code) you can find it at the bottom of this post.
+Follow along the step-by-step walkthrough or jump straight to the complete code at the bottom of the post.
 
 # Install and Configure Contentlayer
 
@@ -44,7 +42,7 @@ Install the Contentlayer packages inside your Next.js project:
 npm install contentlayer next-contentlayer
 ```
 
-Stitch Next.js and Contentlayer together by using the `next-contentlayer` plugin to hook into the `next dev` and `next build` processes. This automatically runs the Contentlayer CLI while you're developing locally or building your app for deployment:
+Stitch Next.js and Contentlayer together using the `next-contentlayer` plugin to hook into the `next dev` and `next build` processes. This automatically runs the Contentlayer CLI while you're developing locally or building your app for deployment:
 
 ```js showLineNumbers title="next.config.js"
 const { withContentlayer } = require("next-contentlayer")
@@ -58,7 +56,7 @@ module.exports = withContentlayer(nextConfig)
 
 Create the schema for your blog post document type:
 
-```js showLineNumbers title="contentlayer.config.js" {4-5,8}
+```js showLineNumbers title="contentlayer.config.js" {4-5,9}
 import { defineDocumentType, makeSource } from "contentlayer/source-files"
 
 export const Post = defineDocumentType(() => ({
@@ -180,7 +178,7 @@ The processed `json` file includes the raw markdown content, the processed MDX c
 
 # TypeScript and Git Integration
 
-Add Contentlayer to your TypeScript configuration to make it easier to import type definition and helper functions:
+Add Contentlayer to your TypeScript configuration to make it easier to import type definitions and helper functions:
 
 ```json showLineNumbers title="tsconfig.json" {5,13}
 {
@@ -200,11 +198,7 @@ Add Contentlayer to your TypeScript configuration to make it easier to import ty
 }
 ```
 
-I'd also recommend adding the `.contentlayer` folder to your `.gitignore` to reduce the git commit and diff noise from generated files:
-
-```gitignore title=".gitignore"
-.contentlayer
-```
+~~I'd also recommend adding the `.contentlayer` folder to your `.gitignore` to reduce the git commit and diff noise from generated files.~~ **Update:** This is now handled automatically when you first generate a document.
 
 # Single Blog Post Page
 
@@ -306,7 +300,7 @@ export default function SinglePostPage({ post }) {
 }
 ```
 
-<Aside title="🐣" side="right" styled>
+<Aside title="🐣" position="right" styled>
   Next.js will pre-render each post by looping through the list of posts you provided to `getStaticPaths(){:.fn}`, fetching the processed data from Contentlayer, passing the data down to your page component as props via `getStaticProps(){:.fn}`, rendering the `SinglePostPage(){:.fn}` page component and saving the result as static files ready for deployment.
 </Aside>
 
@@ -500,9 +494,7 @@ export default function PostListPage({
       {posts.map((post) => (
         <div key={post.slug}>
           <h2>
-            <Link href={`/blog/${post.slug}`}>
-              <a>{post.title}</a>
-            </Link>
+            <Link href={`/blog/${post.slug}`}>{post.title}</Link>
           </h2>
         </div>
       ))}
@@ -656,8 +648,6 @@ module.exports = withContentlayer(nextConfig)
 title: "Hello World"
 ---
 
-# A Captivating Title
-
 This is my first post...
 ```
 
@@ -682,9 +672,7 @@ export default function PostListPage({
       {posts.map((post) => (
         <div key={post.slug}>
           <h2>
-            <Link href={`/blog/${post.slug}`}>
-              <a>{post.title}</a>
-            </Link>
+            <Link href={`/blog/${post.slug}`}>{post.title}</Link>
           </h2>
         </div>
       ))}

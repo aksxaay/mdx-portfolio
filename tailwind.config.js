@@ -8,13 +8,12 @@ module.exports = {
     "./ui/**/*.{js,ts,jsx,tsx}",
     "./lib/**/*.{js,ts}",
     "./content/posts/**/*.mdx",
-    "./contentlayer.config.ts",
   ],
   darkMode: "class",
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Karla", ...defaultTheme.fontFamily.sans],
+        sans: ["var(--font-hubot)", ...defaultTheme.fontFamily.sans],
       },
       colors: {
         gray: colors.stone,

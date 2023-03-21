@@ -3,25 +3,25 @@ import React from "react"
 
 export const Aside = ({
   children,
-  side = "left",
+  position = "left",
   styled = false,
   title,
 }: {
   children: React.ReactNode
-  side?: "left" | "right"
+  position?: "left" | "right"
   styled?: boolean
   title?: string
 }) => {
   return (
     <div
       className={clsx("relative", {
-        "xl:!col-start-2": side === "left",
-        "xl:!col-start-4": side === "right",
+        "xl:!col-start-2": position === "left",
+        "xl:!col-start-4": position === "right",
       })}
     >
       <div
         className={clsx("relative xl:absolute xl:top-0 xl:left-0 xl:right-0", {
-          "z-10 border-l-2 border-rose-200/5 bg-gray-900 pl-4 shadow-[0_0_30px_20px] shadow-gray-900 xl:border-y-2 xl:border-l-0 xl:py-6 xl:pl-0":
+          "z-10 border-l-2 border-rose-200/5 bg-gray-900 pl-4 shadow-[0_0_30px_20px] shadow-gray-900 xl:border-t-2 xl:border-l-0 xl:py-6 xl:pl-0":
             styled,
         })}
       >
