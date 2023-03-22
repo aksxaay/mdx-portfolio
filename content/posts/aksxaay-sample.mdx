@@ -1,0 +1,108 @@
+---
+title: "aksxaay's mdx experiments"
+description: "Inspired by Delba Oliviera I've created this sample mdx post to understand what it means to have an personal portfolio website."
+publishedAt: "2021-05-26"
+status: "published"
+series:
+  order: 1
+  title: "aksxaay's Experiments"
+---
+
+import { createOgImage } from "../../lib/createOgImage"
+
+export const variables = {
+  title: "Automatically Generate Branded Open Graph (OG) Images",
+  meta: "delba.dev · 4 Jul · #next · #cloudinary",
+}
+
+- [My journey into DevRel](#my-journey-into-devrel)
+- [How to break into DevRel](#how-can-i-break-into-devrel)
+- [What it is like working at Vercel](#what-is-it-like-working-at-vercel)
+- [Lessons from the last 6 months](#lessons-from-the-last-six-months)
+- [What’s next](#whats-next)
+
+I'm a big fan of [Josh Comeau's work](https://www.joshwcomeau.com/). The like button on his blog is one of the most delightful UI elements I've come across. It's also a deceptively complex component (I honestly thought I could re-implement it in an hour, haha) that contains an SVG, sounds, mouse tracking, animations and of course, exploding confetti. 🎉
+
+# H1
+
+here generate some content
+
+## H2
+
+here generate some content
+
+### H3
+
+also generate some content
+
+<FauxTweet>
+  Okay this is a sample text between FauxTweet but what if I add more text lorem
+  ipsum{" "}
+</FauxTweet>
+
+<FauxTweet>
+  <Img
+    src={createOgImage({
+      title: variables.title,
+      meta: variables.meta,
+    })}
+    width={1600}
+    height={836}
+  />
+</FauxTweet>
+
+<Aside>
+  <Img
+    caption="Generated image"
+    src={createOgImage({
+      title: variables.title,
+      meta: variables.meta,
+    })}
+    width={1600}
+    height={836}
+  />
+</Aside>
+
+<Aside position="right" styled={true}>
+  The path we send to Cloudinary must form a valid URL. Arguments are separated
+  by commas: `w_1600,h_836,q_100`. Transformation layers can be chained and are
+  separated by slashes: `w_1600,h_836,q_100/grain.png`
+
+only using this for fairly important quotations
+
+```py
+print('Hello World')
+```
+
+so basically mardown flies in here
+
+> here's a quote
+
+</Aside>
+
+I'm a big fan of [Josh Comeau's work](https://www.joshwcomeau.com/). The like button on his blog is one of the most delightful UI elements I've come across. It's also a deceptively complex component (I honestly thought I could re-implement it in an hour, haha) that contains an SVG, sounds, mouse tracking, animations and of course, exploding confetti. 🎉
+
+### Vegeta Quotes
+
+Here's a quote from Vegeta in **DBZ**
+
+> "Only a Failure Abandons His Principles and Pride."
+
+**Vegeta vs Jiren**
+
+> "You may have invaded my mind and my body, but there's one thing a Saiyan always keeps: his pride."
+
+**Possessed Vegeta**
+
+> "Let me ask you: Does a machine like yourself ever experience fear?"
+
+Android 19
+
+> "Is it slavery when you get what you want?"
+
+Possessed Vegeta
+
+> "You say I'm arrogant. I say, damn right. That's pride. Pride in the Saiyan I am."
+> Based Vegeta
+
+well yeah they're on the side, but that's fucking awesome man.

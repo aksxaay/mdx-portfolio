@@ -1,11 +1,11 @@
 import { createOgImage } from "@/lib/createOgImage"
 import type { DefaultSeoProps } from "next-seo"
 
-const title = `Delba`
-const description = `Welcome to my digital garden where I share what I'm learning about shipping great products, becoming a better developer and growing a career in tech.`
-const domain = `delba.dev`
-const twitter = `@delba_oliveira`
-const meta = `Developer Experience at ▲ Vercel and Next.js`
+const title = `aksxaay`
+const description = `Welcome to my digital garden where I share about what I learn. Digital Nomad trying to make it in tech. Web Development.`
+const domain = `aksxaay.dev`
+const twitter = `@juanweeb`
+const meta = `Software Developer`
 
 export const seo: DefaultSeoProps = {
   title: title + " | " + meta,

@@ -123,12 +123,12 @@ export default function Home({
                   <ProfileImage size="large" />
 
                   <div>
-                    <h1 className="text-3xl font-medium text-rose-100/80 sm:text-4xl">
-                      Delba
+                    <h1 className="text-3xl font-medium text-violet-100/80 sm:text-4xl">
+                      aksxaay
                     </h1>
-                    <h2 className="align-middle text-lg leading-6 text-rose-100/50">
+                    <h2 className="align-middle text-lg leading-6 text-violet-100/50">
                       <span className="hidden sm:inline">
-                        Developer Experience
+                        Fresh Graduate
                       </span>
                       <span
                         className="inline sm:hidden"

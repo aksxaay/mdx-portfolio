@@ -91,3 +91,19 @@ what's the N+1 problem that prisma solves?
 okay apparently when you're trying to to execute a query you might trigger this issue without realizing where instead of doing one you might trigger the rest of the queries as well. I can't understand this quite well, but it seems prisma might solve this.
 
 some bugs and things, caching issues.
+
+`_app.tsx` was supposed to be the first page but
+`[...filter.tsx]` is somehow the first page along with Delba's profile picture
+
+
+
+something called
+[optional catch all routes](https://nextjs.org/docs/routing/dynamic-routes#optional-catch-all-routes)
+
+catching all routes made optional by including the parameter in double brackets `[[...slug]]`
+optional catch all is **optional**
+
+
+there is that gradient that I just made wayy stronger, I'll soon figure out some way to overlay it, but
+
+the bigger important one is the noise feel that we're getting on the entire website

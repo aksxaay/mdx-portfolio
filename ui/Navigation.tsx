@@ -14,20 +14,20 @@ export const Navigation = ({
   currentFilters?: CurrentFilters
 }) => {
   return (
-    <div className="flex items-center space-x-7 text-base font-semibold leading-none text-rose-100/90">
+    <div className="flex items-center space-x-7 text-base font-semibold leading-none text-violet-100/90">
       <Link href="/videos" className={cx("group", FOCUS_VISIBLE_OUTLINE)}>
         <div className="sm:flex sm:items-center sm:space-x-2">
           <div className="mb-1.5 flex justify-center sm:mb-0 sm:block">
             <div
               className={cx(
-                "rounded-lg bg-gradient-to-tl from-purple-500/80 to-rose-400/80 p-1 shadow-lg transition-all duration-300 ease-out group-hover:scale-[1.2] group-hover:rounded-[10px] group-hover:shadow-purple-500/40 group-active:translate-y-1",
+                "rounded-lg bg-gradient-to-tl from-indigo-500/80 to-violet-400/80 p-1 shadow-lg transition-all duration-300 ease-out group-hover:scale-[1.2] group-hover:rounded-[10px] group-hover:shadow-purple-500/40 group-active:translate-y-1",
                 {
                   "ring-[2px] ring-purple-500/30 ring-offset-1 ring-offset-black/5":
                     currentFilters?.type === "videos",
                 },
               )}
             >
-              <VideoCameraIcon className="w-[18px] transform text-rose-100 transition delay-100 duration-500 ease-out group-hover:scale-110" />
+              <VideoCameraIcon className="w-[18px] transform text-violet-100 transition delay-100 duration-500 ease-out group-hover:scale-110" />
             </div>
           </div>
           <div>Videos</div>
@@ -39,7 +39,7 @@ export const Navigation = ({
           <div className="mb-1.5 flex justify-center sm:mb-0 sm:block">
             <div
               className={cx(
-                "rounded-lg bg-gradient-to-tl from-purple-500/80 to-rose-400/80 p-1 shadow-lg transition-all duration-300 ease-out group-hover:scale-[1.2] group-hover:rounded-[10px] group-hover:shadow-purple-500/40 group-active:translate-y-1",
+                "rounded-lg bg-gradient-to-tl from-indigo-500/80 to-violet-400/80 p-1 shadow-lg transition-all duration-300 ease-out group-hover:scale-[1.2] group-hover:rounded-[10px] group-hover:shadow-purple-500/40 group-active:translate-y-1",
                 {
                   "ring-[2px] ring-purple-500/30 ring-offset-1 ring-offset-black/5":
                     currentFilters?.type === "blog",
@@ -59,7 +59,7 @@ export const Navigation = ({
       >
         <div className="sm:flex sm:items-center sm:space-x-2">
           <div className="mb-1.5 flex justify-center sm:mb-0 sm:block">
-            <div className="rounded-lg bg-gradient-to-tl from-purple-500/80 to-rose-400/80 p-1 shadow-lg transition-all duration-300 ease-out group-hover:scale-[1.2] group-hover:rounded-[10px] group-hover:shadow-purple-500/40 group-active:translate-y-1">
+            <div className="rounded-lg bg-gradient-to-tl from-indigo-500/80 to-violet-400/80 p-1 shadow-lg transition-all duration-300 ease-out group-hover:scale-[1.2] group-hover:rounded-[10px] group-hover:shadow-purple-500/40 group-active:translate-y-1">
               <TwitterIcon className="w-[18px] transform text-rose-100 transition delay-100 duration-500 ease-out group-hover:scale-110" />
             </div>
           </div>
@@ -73,7 +73,7 @@ export const Navigation = ({
       >
         <div className="sm:flex sm:items-center sm:space-x-2">
           <div className="mb-1.5 flex justify-center sm:mb-0 sm:block">
-            <div className="rounded-lg bg-gradient-to-tl from-purple-500/80 to-rose-400/80 p-1 shadow-lg transition-all duration-300 ease-out group-hover:scale-[1.2] group-hover:rounded-[10px] group-hover:shadow-purple-500/40 group-active:translate-y-1">
+            <div className="rounded-lg bg-gradient-to-tl from-indigo-500/80 to-violet-400/80 p-1 shadow-lg transition-all duration-300 ease-out group-hover:scale-[1.2] group-hover:rounded-[10px] group-hover:shadow-purple-500/40 group-active:translate-y-1">
               <YoutubeIcon className="w-[18px] transform text-rose-100 transition delay-100 duration-500 ease-out group-hover:scale-110" />
             </div>
           </div>

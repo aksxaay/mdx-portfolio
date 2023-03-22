@@ -13,7 +13,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-hubot)", ...defaultTheme.fontFamily.sans],
+        sans: ["var(--font-inter)", ...defaultTheme.fontFamily.sans],
+        hubot: ["var(--font-hubot)", ...defaultTheme.fontFamily.sans],
       },
       colors: {
         gray: colors.stone,

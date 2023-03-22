@@ -14,6 +14,8 @@ const nextConfig = {
       },
       { hostname: "api.microlink.io" },
       { hostname: "pbs.twimg.com" },
+      { hostname: "i.pinimg.com" },
+
     ],
   },
 
