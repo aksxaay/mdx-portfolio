@@ -107,3 +107,8 @@ optional catch all is **optional**
 there is that gradient that I just made wayy stronger, I'll soon figure out some way to overlay it, but
 
 the bigger important one is the noise feel that we're getting on the entire website
+edited the fturbulence noise.
+
+next I have to figure out all the API keys involved and deployment I suppose
+
+The files over at `video` are for straight videos. in-case you release videos or something.
