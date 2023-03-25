@@ -112,3 +112,18 @@ edited the fturbulence noise.
 next I have to figure out all the API keys involved and deployment I suppose
 
 The files over at `video` are for straight videos. in-case you release videos or something.
+
+also is prisma they've used `mysql` as their server, and I'm wondering if I can use mongo for it? I should be able to I think?
+
+the `.env.example` in this project also has a shadow database, not sure if it applies to mongo rn
+
+had to remove the line 
+```prisma
+relationMode = "prisma"
+```
+
+`prisma.session.findUnique()` wrong invocation
+
+had to install `dotenv-cli` for prisma cli usage
+modified `package.json` can now run 
+`npm/yarn run generate`
