@@ -25,22 +25,31 @@ export const Footer = () => {
                 Posts
               </Link>
             </div>
-
             <a
-              href="https://twitter.com/delba_oliveira"
+              href="https://www.linkedin.com/in/aksxaay/"
               className={cx(LINK_SUBTLE_STYLES, FOCUS_VISIBLE_OUTLINE)}
+              target="_blank"
+            >
+              LinkedIn
+            </a>
+            <a
+              href="https://twitter.com/juanweeb"
+              className={cx(LINK_SUBTLE_STYLES, FOCUS_VISIBLE_OUTLINE)}
+              target="_blank"
             >
               Twitter
             </a>
             <a
-              href="https://www.youtube.com/delba"
+              href="https://www.youtube.com/@sidejua"
               className={cx(LINK_SUBTLE_STYLES, FOCUS_VISIBLE_OUTLINE)}
+              target="_blank"
             >
               YouTube
             </a>
             <a
-              href="https://github.com/delbaoliveira"
+              href="https://github.com/aksxaay"
               className={cx(LINK_SUBTLE_STYLES, FOCUS_VISIBLE_OUTLINE)}
+              target="_blank"
             >
               GitHub
             </a>
@@ -53,6 +62,7 @@ export const Footer = () => {
         <a
           href="https://nextjs.org"
           className={cx(LINK_SUBTLE_STYLES, FOCUS_VISIBLE_OUTLINE)}
+          target="_blank"
         >
           Next.js
         </a>
@@ -60,6 +70,7 @@ export const Footer = () => {
         <a
           href="https://mdxjs.com"
           className={cx(LINK_SUBTLE_STYLES, FOCUS_VISIBLE_OUTLINE)}
+          target="_blank"
         >
           MDX
         </a>
@@ -67,6 +78,7 @@ export const Footer = () => {
         <a
           href="https://tailwindcss.com"
           className={cx(LINK_SUBTLE_STYLES, FOCUS_VISIBLE_OUTLINE)}
+          target="_blank"
         >
           Tailwind
         </a>{" "}
@@ -74,6 +86,7 @@ export const Footer = () => {
         <a
           href="https://vercel.com"
           className={cx(LINK_SUBTLE_STYLES, FOCUS_VISIBLE_OUTLINE)}
+          target="_blank"
         >
           Vercel
         </a>

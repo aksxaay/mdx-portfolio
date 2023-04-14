@@ -7,6 +7,8 @@ import VideoCameraIcon from "@heroicons/react/solid/VideoCameraIcon"
 import cx from "clsx"
 import Link from "next/link"
 import React from "react"
+import LinkedinIcon from "./LinkedinIcon"
+import GithubIcon from "./GithubIcon"
 
 export const Navigation = ({
   currentFilters,
@@ -14,8 +16,8 @@ export const Navigation = ({
   currentFilters?: CurrentFilters
 }) => {
   return (
-    <div className="flex items-center space-x-7 text-base font-semibold leading-none text-violet-100/90">
-      <Link href="/videos" className={cx("group", FOCUS_VISIBLE_OUTLINE)}>
+    <div className="flex items-center space-x-10 text-base font-semibold leading-none text-violet-100/90 justify-center">
+      {/* <Link href="/videos" className={cx("group", FOCUS_VISIBLE_OUTLINE)}>
         <div className="sm:flex sm:items-center sm:space-x-2">
           <div className="mb-1.5 flex justify-center sm:mb-0 sm:block">
             <div
@@ -32,7 +34,7 @@ export const Navigation = ({
           </div>
           <div>Videos</div>
         </div>
-      </Link>
+      </Link> */}
 
       <Link href="/blog" className={cx("group", FOCUS_VISIBLE_OUTLINE)}>
         <div className="sm:flex sm:items-center sm:space-x-2">
@@ -52,10 +54,38 @@ export const Navigation = ({
           <div>Posts</div>
         </div>
       </Link>
-
       <a
         className={cx("group", FOCUS_VISIBLE_OUTLINE)}
-        href="https://twitter.com/delba_oliveira"
+        href="https://www.github.com/aksxaay"
+        target="_blank"
+      >
+        <div className="sm:flex sm:items-center sm:space-x-2">
+          <div className="mb-1.5 flex justify-center sm:mb-0 sm:block">
+            <div className="rounded-lg bg-gradient-to-tl from-indigo-500/80 to-violet-400/80 p-1 shadow-lg transition-all duration-300 ease-out group-hover:scale-[1.2] group-hover:rounded-[10px] group-hover:shadow-purple-500/40 group-active:translate-y-1">
+              <GithubIcon className="w-[18px] transform text-rose-100 transition delay-100 duration-500 ease-out group-hover:scale-110" />
+            </div>
+          </div>
+          <div>Github</div>
+        </div>
+      </a>
+      <a
+        className={cx("group", FOCUS_VISIBLE_OUTLINE)}
+        href="https://www.linkedin.com/in/aksxaay/"
+        target="_blank"
+      >
+        <div className="sm:flex sm:items-center sm:space-x-2">
+          <div className="mb-1.5 flex justify-center sm:mb-0 sm:block">
+            <div className="rounded-lg bg-gradient-to-tl from-indigo-500/80 to-violet-400/80 p-1 shadow-lg transition-all duration-300 ease-out group-hover:scale-[1.2] group-hover:rounded-[10px] group-hover:shadow-purple-500/40 group-active:translate-y-1">
+              <LinkedinIcon className="w-[18px] transform text-rose-100 transition delay-100 duration-500 ease-out group-hover:scale-110" />
+            </div>
+          </div>
+          <div>LinkedIn</div>
+        </div>
+      </a>
+      <a
+        className={cx("group", FOCUS_VISIBLE_OUTLINE)}
+        href="https://twitter.com/juanweeb"
+        target="_blank"
       >
         <div className="sm:flex sm:items-center sm:space-x-2">
           <div className="mb-1.5 flex justify-center sm:mb-0 sm:block">
@@ -67,9 +97,10 @@ export const Navigation = ({
         </div>
       </a>
 
-      <a
+      {/* <a
         className={cx("group", FOCUS_VISIBLE_OUTLINE)}
-        href="https://youtube.com/delba"
+        href="https://www.youtube.com/@sidejua"
+        target="_blank"
       >
         <div className="sm:flex sm:items-center sm:space-x-2">
           <div className="mb-1.5 flex justify-center sm:mb-0 sm:block">
@@ -79,7 +110,7 @@ export const Navigation = ({
           </div>
           <div>YouTube</div>
         </div>
-      </a>
+      </a> */}
     </div>
   )
 }

@@ -126,9 +126,10 @@ export default function Home({
                     <h1 className="text-3xl font-medium text-violet-100/80 sm:text-4xl">
                       aksxaay
                     </h1>
-                    <h2 className="align-middle text-lg leading-6 text-violet-100/50">
-                      <span className="hidden sm:inline">
-                        Fresh Graduate
+                    <h2 className="text-violet-300/80 align-middle text-lg leading-6">
+                      <span className="hidden sm:inline">Software</span>{" "}
+                      <span className="font-medium text-rose-100/70">
+                        Developer
                       </span>
                       <span
                         className="inline sm:hidden"
@@ -136,7 +137,7 @@ export default function Home({
                       >
                         DX
                       </span>{" "}
-                      at{" "}
+                      {/* at{" "}
                       <span className="font-medium text-rose-100/70">
                         <span className="mr-px align-middle">
                           <span className="-my-2 inline-block text-[24px]">
@@ -144,7 +145,7 @@ export default function Home({
                           </span>
                         </span>
                         Vercel
-                      </span>
+                      </span> */}
                     </h2>
                   </div>
                 </div>

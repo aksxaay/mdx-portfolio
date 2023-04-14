@@ -2,7 +2,7 @@ import { createOgImage } from "@/lib/createOgImage"
 import type { DefaultSeoProps } from "next-seo"
 
 const title = `aksxaay`
-const description = `Welcome to my digital garden where I share about what I learn. Digital Nomad trying to make it in tech. Web Development.`
+const description = `Welcome to my Digital Escape where I share my learnings. The world often leaves me with no way, but look what I find.`
 const domain = `aksxaay.dev`
 const twitter = `@juanweeb`
 const meta = `Software Developer`

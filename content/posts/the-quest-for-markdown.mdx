@@ -1,0 +1,344 @@
+---
+title: "The Quest For Markdown: Origins"
+description: "Here starts the journey of 'Why Markdown?'"
+publishedAt: "2023-04-13"
+status: "published"
+series:
+  order: 1
+  title: "The Quest For Markdown"
+---
+
+import { createOgImage } from "../../lib/createOgImage"
+
+export const variables = {
+  title: "aksxaay's introduction",
+  meta: "aksxaay.dev · 4 Jul · #next · #cloudinary",
+}
+
+# The Quest For Markdown: Origins
+
+Hey there, This is Akshay, if you hadn't caught that earlier, here with an anecdote to share. I've been on a journaling journey for almost two years now, using Markdown to keep my thoughts in check. I've been a diehard [Obsidian](https://obsidian.md/) user for a while, but I couldn't resist the temptation of backing up my journal in VS Code because of its sweet `.md` support and `git` integration.
+
+{/* prettier-ignore */}
+<Aside>
+  - Yes, I write my life events on **VS Code** and push it to **Github**, and 
+  - no **Github Copilot** cannot predict my life and,
+  - Please! No! Don't <span style={{color: "orange"}}>fork</span> my journal, not cool!!.
+</Aside>
+
+Okay, so here's the deal: I've noticed that I've gotten into this weird habit of talking to myself through text, all thanks to my journaling obsession. I mean, who needs a therapist when you converse with your two other personalities, am I right? (Don't worry, I've tried proofreading this at least once!) But, anyway, let's get on with this!
+
+## Prologue
+
+Motivation Behind this Blog?
+
+I mean why did this even happen?
+It is _merely_ a blog, so what's up?
+
+I think it is **insane** how we've managed to look down upon the layers of work that goes into making any technology ready for the masses.
+
+Who hasn't heard of blog sites? There's literally countless of them.
+Let's take the best blog websites.
+
+1. [Wix](https://www.wix.com/)
+
+- User-friendly website builder platform.
+- offers highly **customizable templates** and **drag-and-drop functionality**.
+- ideal for bloggers who want ease-of-use and customization.
+- requires **no coding experience**.
+- built-in blog editor.
+- wide range of third-party apps and **plugins**.
+
+2. [Wordpress](https://wordpress.com/)
+
+- Highly customizable platform that offers a wide range of features and plugins for bloggers.
+- It is a self-hosted platform, meaning that bloggers have more control over their website's **design** and **functionality**.
+- Ideal for bloggers who want complete control over their website's look and feel. Additionally,
+- WordPress offers **powerful SEO**, improves website's search engine ranking.
+
+As for the confusion b/w [WordPress.org vs WordPress.com](https://www.youtube.com/watch?v=kD_Db3TCno0), here's a link.
+
+3. [Medium](https://medium.com/)
+
+- Allows users to **publish** and **share** their content with a wider audience.
+- It is ideal for bloggers who want to **focus** on writing and publishing content.
+- Medium offers a clean and simple interface, and no focus on website design and maintenance
+- Offers a built-in social network that can help bloggers connect with readers and build their audience.
+
+Medium was a _great_ platform, but I felt like a literary major trying to make that my primary blog, not to mention, I had already gotten used Markdown and from what I can see and the looks of it, Markdown (md) just seems to be a simpler HTML style writing, I mean right? RIGHT?
+
+but how could I use this? I'm enrolled in a **CS degree** I should be able to whip up something more complex, and something far more personal and customizable. Right?
+
+Oh Boy was I <span style={{color:"orangered"}}>wrong</span>.
+
+The funniest story was, that I got into Web Development because this one time I was using Selenium on Python for Web Scraping because I thought that if I could scrape data and automate everything I can focus less on the repetitive tasks of my day. Lord talk about naive.
+Anyways, I found out eventually that, it worked better on Javascript, and that Selenium WebDriver with JavaScript is the more suitable combination to perform automation of applications as compared to Python. Javascript offers efficiency with its well-built and structured patterns and functions, making Selenium more robust.
+
+So might as well, learn the basics of Javascript, what could possible go wrong learning this language that resembles C++?
+Wait a minute, it resembles multiple other languages too?
+Wait, what even is a multi-paradigm scripting language?
+
+- object-oriented
+- imperative
+- functional
+
+Wait what "Everything Javascript"? That's a <span style={{color:"orangered"}}>cult</span>.
+Who new 4 months down the line, I would start develop feelings for Javascript.
+
+It surprised me how a single-threaded language, who's implementations allow client-side scripts to interact with the user and make static pages dynamic, and all the while making it the **most** and **least** favourite language in the world?
+30,000 developers around the world agree on the above fact according to the [<span style={{color:"skyblue"}}>State of Developer Ecosystem 2022</span>](https://www.jetbrains.com/lp/devecosystem-2022/) report.
+
+somewhere here is where began a phase which I would call the <span style={{color:"skyblue"}}>**Quest for Markdown**</span>.
+
+## Quest for Markdown
+
+I decided to find out in a repository called [next-markdown](https://github.com/aksxaay/next-markdown/tree/next) and boy did I find out the hard way.
+
+I figured out all the dependencies and all about npm and npx.
+`mdx` basically `jsx` in Markdown and `@next/mdx` was the package to look out for.
+
+So now I wrote HTML through `md`, and call it `mdx`.
+
+Then I found out about `remark` and `rehype` plugins.
+I started this over 6 months ago.
+
+I found out about the existence of
+
+- GFM - Github Flavored Markdown (GFM)
+- Frontmatter
+- Math - LaTeX
+- Synatax Highlighting
+- Embed - tweets, gists or code sandboxes in markdown
+
+and so much more..
+
+By default it only supported [CommonMark](https://spec.commonmark.org/0.30/), but I had already been accustomed to the advanced features that [GFM](https://github.github.com/gfm/) offered.
+
+unified (remark) plugin to enable the extensions to markdown that GFM offers.
+unified is apparently the underlying content transformer that remark and most other plugins were using.
+
+{/* prettier-ignore */}
+```md title="remark plugin content transformer flow"
+| ........................ process ........................... |
+| .......... parse ... | ... run ... | ... stringify ..........|
+
+          +--------+                     +----------+
+Input ->- | Parser | ->- Syntax Tree ->- | Compiler | ->- Output
+          +--------+          |          +----------+
+                              X
+                              |
+                       +--------------+
+                       | Transformers |
+                       +--------------+
+```
+
+that ASCII flow diagram was pretty much the only explanation I was able to takeaway.
+
+So far here's the gist,
+remark - markdown
+rehype - HTML
+
+Soon after I came across [remark and rehype's entire plugin ecosystem](https://github.com/remarkjs/remark/blob/main/doc/plugins.md#list-of-plugins) and was pretty much left overwhelmed.
+
+College was pretty hard to juggle, and it wasn't panning out, especially given the context that I was still a beginner at Javascript and React, and none of this was making sense.
+
+I gave up not long after, and was desperately looking for **boilerplate blogs**.
+
+I had seen enough, enough to make a grown man <span style={{color:"red"}}>cry</span>. I was also running into some paid services, which I was honestly ready to fork over hard earned dollars for. 
+
+But I persevered, because I had an insane habit for not settling for less, I'd rather have nothing than not settle for the thing I wanted.
+
+My React and Javascript were eventually getting better.
+I soon came across someone's implementation of a modern blog app that fetched data from a CMS -> Content Management System.
+
+I was eventually able to add-on to it, and it used the following tools:
+- NextJS
+- GraphQL
+- TailwindCSS
+
+<Img
+  src={`/the-quest-for-blog/jua-blog-cms.png`}
+  bleed={true}
+  width={1200}
+  height={450}
+  caption="Next.js blog with SanityCMS"
+>
+  Me in my first Vercel all hands
+</Img>
+
+<Img
+  src={`/the-quest-for-blog/jua-blog-cms-featured.png`}
+  bleed={true}
+  width={1200}
+  height={450}
+  caption="Full fledged featured posts using react-multi-carousel"
+>
+  {" "}
+</Img>
+
+<Aside>
+  <Img
+    src={`/the-quest-for-blog/jua-blog-cms-comment-box.png`}
+    bleed={false}
+    width={1200}
+    height={900}
+    caption="comment box to engage the audience"
+  >
+    {" "}
+  </Img>
+</Aside>
+
+<Aside position="right">
+  <Img
+    src={`/the-quest-for-blog/jua-blog-cms-related-tags.png`}
+    bleed={false}
+    width={1200}
+    height={900}
+    caption="Content Sorted by Tags"
+  >
+    {" "}
+  </Img>
+</Aside>
+
+<Img
+  src={`/the-quest-for-blog/jua-blog-cms-content-card.png`}
+  bleed={false}
+  width={1200}
+  height={900}
+  caption="sample content card"
+>
+  {" "}
+</Img>
+
+<Aside position="right">
+  <Img
+    src={`/the-quest-for-blog/jua-blog-cms-next-card.png`}
+    bleed={false}
+    width={1200}
+    height={900}
+    caption="Suggestive Content for Further Reading"
+  >
+    {" "}
+  </Img>
+</Aside>
+
+I won't be able to explain much of the code, due to the nature of this particular blog,
+
+but here were some highlights-
+
+
+After setting up a `GRAPHCMS_TOKEN` in an `.env` file, I was able to draft a GraphQL query.
+
+```js title="/blog/services/index.js"
+export const getCategories = async () => {
+  const query = gql`
+    query GetGategories {
+      categories {
+        name
+        slug
+      }
+    }
+  `
+
+  const result = await request(graphqlAPI, query)
+
+  return result.categories
+}
+```
+
+this was an example for `getCategories` this was followed for `getPosts`, `getComments`, `getSimilarPosts` etc
+
+By now I had also started getting comfortable in CSS Technologies, where I was confident enough to skip straight to **TailwindCSS** (ballsy move). It was fairly easy to design given their utility classes approach, and various code snippets available on the internet.
+
+You might be wondering where all the data was going to be stored. 
+Well,
+the interesting part of this project excluding the design, was the CMS from graphCMS (now called [Hygraph](https://hygraph.com/)).
+
+They basically were something called a **Content Lake** called a headless CMS, which helps manage and distribute content via **APIs**.
+
+The whole concept is basically separation of concern where, the managed content stays on one platform, which leads to being able to build a technology agnostic frontend.
+
+
+<Aside position="left">
+  <Img
+    src={`/the-quest-for-blog/headless.png`}
+    bleed={false}
+    width={1200}
+    height={900}
+    caption="Separation of concern by headless CMS Traditional CMS (above) and Headless CMS (below)"
+  >
+    {" "}
+  </Img>
+</Aside>
+
+
+The storage was automatically distributed, and the content was managed through a web interface (admin dashboard) on their website. It was the flexible modern content management platform. Paired with GraphQL, you could query only exactly what you wanted without worrying about a backend. It also came with a rich editing experience, so it was back to like editing a blog.
+
+The content is hosted on their cloud solutions and you can manage it through a web admin dashboard, it it made first it extremely easy for beginner backend users. The main advantage of headless CMS was that it wasn't headless (no front-end), but it was that you could choose any technology as your head (any front-end framework). I was basically it in for the ease of use.
+
+<Img
+  src={`/the-quest-for-blog/graphcms-illustration.png`}
+  bleed={false}
+  width={1200}
+  height={900}
+  caption="graphCMS basic workflow"
+>
+  {" "}
+</Img>
+
+<Img
+  src={`/the-quest-for-blog/readable-schema.png`}
+  bleed={false}
+  width={1200}
+  height={900}
+  caption="Simple Schema Abstraction"
+>
+  {" "}
+</Img>
+
+So what again was the catch?
+
+This time I:
+- owned the website
+- frequently update content without code-maintenance.
+- never have to redeploy the website, as their API's were version managed.
+- generous free tier.
+
+
+But it strayed away from Markdown and it was closer to a Medium content editing experience than it was Markdown, but the features it came after the initial setup was plenty. The free tier was pretty generous too, with upto 1B+ API calls a month, it was ample for low traffic personal websites, and it would autoscale too, at a small fee of course.
+
+It also came with a low-code schema with was helpful for people who only started out with frontend experience.
+
+It also came with it's own version control, and easy configurable Entity Relationships.
+- 1-1
+- 1-M
+- M-M
+
+All of this ensured that, once the website was deployed, I would virtually be touching no code during content creation.
+
+I had finally reached the endgame right? I have finally gotten all the features I wanted to get in a blog yes? Well everything except the initial thing I wanted, which was **Markdown**.
+
+I literally had a **whole functional blog** ready for deployment on **Vercel**, but I was still unsatisfied. Was my quest for markdown really that worth it?
+
+Whatever the reason was, I had to come back to the drawing board again.
+I had to make something that would satisfy all the criteria. I couldn't settle.
+
+I made a list of criteria which I tried to aim for.
+- markdown based
+- maintainable (code)
+- easy content management
+- primarily a blog
+- easy access to other socials
+- mdx (markdown) based
+- Next.js
+- easy styling (tailwindcss)
+- code snippets support
+- syntax highlighting (varied languages)
+- seo friendly
+- outline headings
+- simple post metrics
+- comments section (optional)
+
+This current blog that is deployed, truly takes care of virtually all of the **features*** mentioned above.
+
+Continued..

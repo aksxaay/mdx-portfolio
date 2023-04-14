@@ -88,6 +88,9 @@ module.exports = {
           5px 10px 12.6px -2.5px rgba(3, 2, 2, 0.1)`,
       }),
     },
+    backgroundSize: {
+      "50%": "50%",
+    },
   },
   variants: {
     extend: {},

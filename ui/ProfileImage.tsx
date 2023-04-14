@@ -29,8 +29,9 @@ export const ProfileImage = ({
         })}
       >
         <Image
-        // female mahito temp
-          src="https://i.pinimg.com/236x/9c/5d/77/9c5d77e432c180e30a2009cc5b2b3d57.jpg"
+          // female mahito temp
+          // src="/akshay-dp.jpeg"
+          src="/swag.jpeg"
           alt="A photo of aksxaay"
           quality={95}
           priority={true}

@@ -10,10 +10,11 @@ export default function Document() {
           rel="preload"
           as="image"
           href="https://res.cloudinary.com/delba/image/upload/h_500/bg_gradient_pfosr9"
+          // href="https://as1.ftcdn.net/v2/jpg/04/28/22/08/1000_F_428220871_7cmRuWAncfw4MtcQL0YzlGyIPkvZDGuA.jpg"
         />
       </Head>
 
-      <body className="bg-gray-900 antialiased selection:bg-purple-500/90 selection:text-white">
+      <body className="bg-neutral-900 antialiased selection:bg-purple-500/90 selection:text-white">
         <Main />
         <NextScript />
       </body>

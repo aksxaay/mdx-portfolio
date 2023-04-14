@@ -93,7 +93,7 @@ okay apparently when you're trying to to execute a query you might trigger this 
 some bugs and things, caching issues.
 
 `_app.tsx` was supposed to be the first page but
-`[...filter.tsx]` is somehow the first page along with Delba's profile picture
+`[[...filter]].tsx` is somehow the first page along with Delba's profile picture
 
 
 

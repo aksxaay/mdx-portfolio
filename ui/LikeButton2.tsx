@@ -5,7 +5,7 @@ import HeartIcon from "@heroicons/react/solid/HeartIcon"
 import cx from "clsx"
 import React from "react"
 
-const emojis = ["👍", "🙏", "🥰"]
+const emojis = ["💚", "🧡", "🤍"];
 
 // A visual component that...
 // 1. Fills a heart shape with a gradient depending on the number of likes passed

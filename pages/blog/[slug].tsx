@@ -64,11 +64,11 @@ export default function PostPage({
 
   const path = `/blog/${post.slug}`
 
-  const url = `https://delba.dev${path}`
-  const title = `${post.title} | delba.dev`
+  const url = `https://aksxaay.dev${path}`
+  const title = `${post.title} | aksxaay.dev`
   const ogImage = createOgImage({
     title: post.title,
-    meta: "delba.dev · " + post.publishedAtFormatted,
+    meta: "aksxaay.dev · " + post.publishedAtFormatted,
   })
 
   return (
