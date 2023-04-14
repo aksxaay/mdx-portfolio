@@ -127,3 +127,19 @@ relationMode = "prisma"
 had to install `dotenv-cli` for prisma cli usage
 modified `package.json` can now run 
 `npm/yarn run generate`
+
+## 15th April
+
+I know I haven't particularly spoken with you in a good bit,
+but everything's been good I'd say?
+
+I've been hard at work trying to figure out how to get this up and running.
+
+We've written out the content over the past few days, I've been proud of that.
+
+But anyways,
+there's some slug issue over at the quest-for-markdown-ascension/2.mdx
+I have to figure out what it is.
+
+
+1st successful build, I sent the `quest-for-markdown-ascension.mdx` file over to `drafts` and it built well
