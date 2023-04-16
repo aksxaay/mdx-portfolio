@@ -149,3 +149,23 @@ and it built well
 Well recently I've been running into `.contentlayer` folder not generating, so I added
 `contentlayer dev & next dev` to the npm run scripts
 
+
+
+SEO is an ongoing process, remember.
+1. Google Search Console
+2. Google Analytics
+3. SEO auditing tools
+4. meta tags updated - Yoast SEO
+
+
+Search Console
+has some steps of verification
+- also related to the google domains
+
+
+need to learn how Next.js's SEO stuff works.
+
+you can apparently just curl the page directly (like google's crawlers)
+`curl https://mdx-portfolio-blog.vercel.app/`
+
+I need to find out what happens when someone sends the link / or it is an embed of sorts.
