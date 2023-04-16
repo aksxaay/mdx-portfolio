@@ -142,4 +142,10 @@ there's some slug issue over at the quest-for-markdown-ascension/2.mdx
 I have to figure out what it is.
 
 
-1st successful build, I sent the `quest-for-markdown-ascension.mdx` file over to `drafts` and it built well
+1st successful build, I sent the `quest-for-markdown-ascension.mdx` file over to `drafts` 
+and it built well
+
+## 16th April
+Well recently I've been running into `.contentlayer` folder not generating, so I added
+`contentlayer dev & next dev` to the npm run scripts
+

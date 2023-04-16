@@ -7,24 +7,24 @@ export const Footer = () => {
     <div className="mt-36 pb-36 text-base">
       <div className="text-gray-500">
         <div className="flex flex-col justify-between font-medium lg:flex-row">
-          <div className="flex space-x-5">
-            <div>
+          <div className="flex flex-wrap space-x-5 [&>span]:ml-5">
+            <span className="">
               <Link
                 href="/videos"
                 className={cx(LINK_SUBTLE_STYLES, FOCUS_VISIBLE_OUTLINE)}
               >
                 Videos
               </Link>
-            </div>
+            </span>
 
-            <div>
+            <span>
               <Link
                 href="/blog"
                 className={cx(LINK_SUBTLE_STYLES, FOCUS_VISIBLE_OUTLINE)}
               >
                 Posts
               </Link>
-            </div>
+            </span>
             <a
               href="https://www.linkedin.com/in/aksxaay/"
               className={cx(LINK_SUBTLE_STYLES, FOCUS_VISIBLE_OUTLINE)}

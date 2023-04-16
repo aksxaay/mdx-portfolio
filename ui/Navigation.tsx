@@ -16,7 +16,7 @@ export const Navigation = ({
   currentFilters?: CurrentFilters
 }) => {
   return (
-    <div className="flex items-center space-x-10 text-base font-semibold leading-none text-violet-100/90 justify-center">
+    <div className="ml-2 flex items-center justify-center space-x-4 text-sm font-semibold leading-none text-violet-100/90 md:space-x-7 md:text-base">
       {/* <Link href="/videos" className={cx("group", FOCUS_VISIBLE_OUTLINE)}>
         <div className="sm:flex sm:items-center sm:space-x-2">
           <div className="mb-1.5 flex justify-center sm:mb-0 sm:block">
@@ -51,7 +51,7 @@ export const Navigation = ({
               <AnnotationIcon className="w-[18px] transform text-rose-100 transition delay-100 duration-500 ease-out group-hover:scale-110" />
             </div>
           </div>
-          <div>Posts</div>
+          <div className="hidden xs:block">Posts</div>
         </div>
       </Link>
       <a
@@ -65,7 +65,7 @@ export const Navigation = ({
               <GithubIcon className="w-[18px] transform text-rose-100 transition delay-100 duration-500 ease-out group-hover:scale-110" />
             </div>
           </div>
-          <div>Github</div>
+          <div className="hidden xs:block">Github</div>
         </div>
       </a>
       <a
@@ -79,7 +79,7 @@ export const Navigation = ({
               <LinkedinIcon className="w-[18px] transform text-rose-100 transition delay-100 duration-500 ease-out group-hover:scale-110" />
             </div>
           </div>
-          <div>LinkedIn</div>
+          <div className="hidden xs:block">LinkedIn</div>
         </div>
       </a>
       <a
@@ -93,7 +93,7 @@ export const Navigation = ({
               <TwitterIcon className="w-[18px] transform text-rose-100 transition delay-100 duration-500 ease-out group-hover:scale-110" />
             </div>
           </div>
-          <div>Twitter</div>
+          <div className="hidden xs:block">Twitter</div>
         </div>
       </a>
 

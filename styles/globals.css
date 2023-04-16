@@ -3,6 +3,20 @@
 @tailwind utilities;
 
 /* Font Size Global Controller */
-* {
-  font-size: 105%;
+@media (min-width: 1024px) {
+  * {
+    font-size: 102%;
+  }
+}
+
+@media (min-width: 768px) {
+  * {
+    font-size: 105%;
+  }
+}
+
+@media (max-width: 640px) {
+  * {
+    font-size: 100%;
+  }
 }
