@@ -12,7 +12,7 @@ import { HEADING_LINK_ANCHOR } from "./lib/constants"
 import {
   rehypePrettyCodeClasses,
   rehypePrettyCodeOptions,
-} from "./lib/rehyePrettyCode"
+} from "./lib/rehypePrettyCode"
 
 export default makeSource({
   contentDirPath: "content",

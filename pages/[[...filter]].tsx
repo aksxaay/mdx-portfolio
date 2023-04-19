@@ -129,7 +129,7 @@ export default function Home({
                     <h2 className="text-violet-300/80 align-middle text-lg leading-6">
                       <span className="hidden sm:inline">Software</span>{" "}
                       <span className="font-medium text-rose-100/70">
-                        Developer
+                        Software Developer
                       </span>
                       <span
                         className="inline sm:hidden"

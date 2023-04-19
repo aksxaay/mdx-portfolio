@@ -169,3 +169,5 @@ you can apparently just curl the page directly (like google's crawlers)
 `curl https://mdx-portfolio-blog.vercel.app/`
 
 I need to find out what happens when someone sends the link / or it is an embed of sorts.
+
+Spelling errors: One Find Day.
