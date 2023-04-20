@@ -171,3 +171,6 @@ you can apparently just curl the page directly (like google's crawlers)
 I need to find out what happens when someone sends the link / or it is an embed of sorts.
 
 Spelling errors: One Find Day.
+
+
+I also found out that even though I was supposed to segregate `devDependencies` and `dependencies`

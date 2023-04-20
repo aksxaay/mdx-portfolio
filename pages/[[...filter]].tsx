@@ -126,11 +126,11 @@ export default function Home({
                     <h1 className="text-3xl font-medium text-violet-100/80 sm:text-4xl">
                       aksxaay
                     </h1>
-                    <h2 className="text-violet-300/80 align-middle text-lg leading-6">
-                      <span className="hidden sm:inline">Software</span>{" "}
+                    <h2 className="align-middle text-lg leading-6 text-violet-300/80">
                       <span className="font-medium text-rose-100/70">
-                        Software Developer
-                      </span>
+                        Software
+                      </span>{" "}
+                      <span className="hidden sm:inline">Developer</span>
                       <span
                         className="inline sm:hidden"
                         title="Developer Experience"
@@ -171,7 +171,7 @@ export default function Home({
               <>
                 <div className="flex space-x-2">
                   {currentFilters.tag ? (
-                    <div className="rounded-full border border-rose-100/5 py-0.5 px-2 text-rose-100/90">
+                    <div className="rounded-full border border-rose-100/5 px-2 py-0.5 text-rose-100/90">
                       {currentFilters.tag}
                     </div>
                   ) : null}
@@ -180,8 +180,9 @@ export default function Home({
                 {currentFilters.type === "videos" ? (
                   <div className="flex">
                     <a
-                      href="https://youtube.com/playlist?list=PLo9a4XFa98CBynQ0HE_UstByk_-KXg6eU"
+                      href="https://www.youtube.com/@sidejua"
                       className="group flex items-center space-x-2"
+                      target="_blank"
                     >
                       <span className="text-lg text-rose-100/40 transition-colors group-hover:text-rose-100/80">
                         YouTube Playlist
