@@ -51,8 +51,22 @@ export const BlogPostPreview = (post: ReturnType<typeof formatPostPreview>) => {
   return (
     <div ref={intersectionRef}>
       <ContentLink key={post.slug} href={`/blog/${post.slug}`}>
-        <ContentLink.Title>{post.title}</ContentLink.Title>
-
+        <ContentLink.Title>
+          {post.pinned ? (
+            <>
+              <span
+                style={{
+                  filter: "hue-rotate(250deg) grayscale(80%) contrast(10%)",
+                  display: "inline-block",
+                }}
+              >
+                📌
+              </span>{" "}
+              &middot;{" "}
+            </>
+          ) : null}
+          {post.title}
+        </ContentLink.Title>
         <ContentLink.Meta>
           <div>{post.publishedAtFormatted}</div>
           {enabled ? <Metrics slug={post.slug} /> : null}

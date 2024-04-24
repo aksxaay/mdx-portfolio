@@ -24,6 +24,7 @@ export const Post = defineDocumentType(() => ({
       type: "list",
       of: Tag,
     },
+    pinned: { type: "boolean" },
   },
   computedFields: {
     headings: {

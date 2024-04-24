@@ -17,6 +17,7 @@ model Post {
   slug      String   @unique
   likes     Int      @default(0)
   views     Int      @default(0)
+  pinned    Boolean  @default(false)
 }
 
 model Session {

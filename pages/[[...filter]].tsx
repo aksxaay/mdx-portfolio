@@ -52,9 +52,18 @@ export const getStaticProps: GetStaticProps<{
   let posts = [
     ...allVideos.map(formatVideoPreview),
     ...allPosts.filter((p) => p.status === "published").map(formatPostPreview),
-  ].sort(
-    (a, b) => Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt)),
-  )
+  ].sort((a, b) => {
+    if (a.type == "Post" && b.type == "Post") {
+      const aPinned = a?.pinned || false
+      const bPinned = b?.pinned || false
+
+      if (aPinned !== bPinned) {
+        return Number(bPinned) - Number(aPinned)
+      }
+    }
+
+    return Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt))
+  })
 
   let currentFilters: CurrentFilters = null
 

@@ -26,9 +26,9 @@ prisma.studio manages all tables and rows and things.
 to get started you need a relational database like MYSQL / PostgreSQL
 
 mongoDB is supported as well.
-```npx prisma init```
+`npx prisma init`
 also prisma directory and things.
-```prisma db pull generates a schema```
+`prisma db pull generates a schema`
 
 optional constraints
 code is very concise than otherwise in raw SQL
@@ -36,14 +36,16 @@ code is very concise than otherwise in raw SQL
 to interact with the databse
 `prisma generate` to generate the client library.
 
-
 ### What is an ORM?
+
 which ORM should one use?
 Object Relational Mapping it helps write less code and be more concise another stack that I have to add to my damn thing bruh.
 [Ben Awad // ORM](https://www.youtube.com/watch?v=3Pxj-4IrOcs)
 
-dude was using 
-### Sequelize - 
+dude was using
+
+### Sequelize -
+
 - been around the longest
 - solid and mature
 - experience was meh
@@ -53,15 +55,16 @@ dude was using
 idk I'm not happy using this either.
 
 ### TypeORM
+
 - connections are confusin
 - their API needs to be improved
 - docs needs to be better.
 - integration with TS(typescript) is much better
-- nice `QueryBuilder()`  
+- nice `QueryBuilder()`
 - this is what Ben Awas consistently uses
 
-
 ### Prisma - not quite an ORM
+
 - tries to replace traditional ORMs
 - wouldn't categorize them an ORM.
 - create a data model (graphQL syntax)
@@ -79,7 +82,6 @@ idk I'm not happy using this either.
 - you run into corner case and edge cases or something
 - not working with some postgres columns
 
-
 `prisma generate --watch` this updates automatically.
 
 Prisma 2 is somewhere between an `ORM` and `QueryBuilder` closer to a query builder, and it has a higher level API
@@ -95,14 +97,11 @@ some bugs and things, caching issues.
 `_app.tsx` was supposed to be the first page but
 `[[...filter]].tsx` is somehow the first page along with Delba's profile picture
 
-
-
 something called
 [optional catch all routes](https://nextjs.org/docs/routing/dynamic-routes#optional-catch-all-routes)
 
 catching all routes made optional by including the parameter in double brackets `[[...slug]]`
 optional catch all is **optional**
-
 
 there is that gradient that I just made wayy stronger, I'll soon figure out some way to overlay it, but
 
@@ -117,7 +116,8 @@ also is prisma they've used `mysql` as their server, and I'm wondering if I can 
 
 the `.env.example` in this project also has a shadow database, not sure if it applies to mongo rn
 
-had to remove the line 
+had to remove the line
+
 ```prisma
 relationMode = "prisma"
 ```
@@ -125,7 +125,7 @@ relationMode = "prisma"
 `prisma.session.findUnique()` wrong invocation
 
 had to install `dotenv-cli` for prisma cli usage
-modified `package.json` can now run 
+modified `package.json` can now run
 `npm/yarn run generate`
 
 ## 15th April
@@ -141,27 +141,25 @@ But anyways,
 there's some slug issue over at the quest-for-markdown-ascension/2.mdx
 I have to figure out what it is.
 
-
-1st successful build, I sent the `quest-for-markdown-ascension.mdx` file over to `drafts` 
+1st successful build, I sent the `quest-for-markdown-ascension.mdx` file over to `drafts`
 and it built well
 
 ## 16th April
+
 Well recently I've been running into `.contentlayer` folder not generating, so I added
 `contentlayer dev & next dev` to the npm run scripts
 
-
-
 SEO is an ongoing process, remember.
+
 1. Google Search Console
 2. Google Analytics
 3. SEO auditing tools
 4. meta tags updated - Yoast SEO
 
-
 Search Console
 has some steps of verification
-- also related to the google domains
 
+- also related to the google domains
 
 need to learn how Next.js's SEO stuff works.
 
@@ -172,5 +170,14 @@ I need to find out what happens when someone sends the link / or it is an embed 
 
 Spelling errors: One Find Day.
 
-
 I also found out that even though I was supposed to segregate `devDependencies` and `dependencies`
+
+### Revision
+
+- which part comes from local, which part fetched from db, local doesn't have the date / time published?
+  - the db has `createdAt` property which makes no sense.
+
+updated schema for pinned
+`content/definitions/Post.ts` updated for pinned!
+
+- what is ContentLink.Title.Meta and things

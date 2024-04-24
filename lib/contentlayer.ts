@@ -22,6 +22,7 @@ export const formatPostPreview = (post: Post) => {
     "slug",
     "title",
     "description",
+    "pinned",
     "publishedAt",
     "publishedAtFormatted",
   ])
@@ -30,6 +31,7 @@ export const formatPostPreview = (post: Post) => {
     ...partialPost,
     type: post.type,
     description: partialPost.description ?? null,
+    pinned: partialPost.pinned ?? null,
     tags: partialPost.tags || [],
   }
 }
